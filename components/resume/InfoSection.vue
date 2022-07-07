@@ -1,6 +1,6 @@
 <!-- eslint-disable import/extensions -->
 <template>
-  <section class="print:mt-1 mt-8 first:mt-0">
+  <div class="print:mt-1 mt-8 first:mt-0">
     <!-- To keep in the same column -->
     <section class="mb-4 print:mb-1 break-inside-avoid print:break-inside-auto">
       <h2
@@ -54,7 +54,7 @@
         </div>
       </section>
     </section>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

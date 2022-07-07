@@ -6,7 +6,7 @@
       title="Full Stack Web Development"
     />
     <!-- Column -->
-    <div class="print:columns-2 md:columns-3 gap-8 print:gap-2">
+    <div class="print:columns-2 md:columns-3 print:gap-2 md:gap-9">
       <!-- Resume About Me -->
       <ResumeInfoSection section-title="ABOUT ME" :items="ResumeAboutItems" />
 

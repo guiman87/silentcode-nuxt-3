@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gradient-to-t from-black to-[#020202] via-[#030120]">
-    <div class="mx-auto max-w-screen-lg px-3 py-6">
+    <div class="mx-auto max-w-7xl px-3 py-6">
       <div
         class="flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between"
       >
@@ -10,7 +10,7 @@
           >
             <img
               class="rounded-full h-12"
-              src="https://github.com/guiman87.png"
+              src="~/assets/img/avatar.jpg"
               alt="Avatar image"
               loading="lazy"
             /></div
@@ -27,7 +27,7 @@
         </nav>
       </div>
     </div>
-    <div class="mx-auto max-w-screen-lg px-3 pt-12 pb-16 text-amber-100">
+    <div class="mx-auto max-w-7xl px-3 pt-12 pb-16 text-amber-100">
       <div class="lg:grid lg:grid-cols-12 lg:gap-8">
         <div class="md:mx-auto lg:col-span-9">
           <div class="">
