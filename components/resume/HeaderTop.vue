@@ -1,24 +1,28 @@
 <!-- eslint-disable import/extensions -->
 <template>
   <!-- Name -->
-  <header class="flex items-center mb-8 md:mb-11">
-    <div
-      class="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3"
-      style="padding-bottom: 0.6875rem; padding-top: 0.6875rem; /*11px*/"
-    >
-      <div
-        class="initial text-center"
-        style="padding-bottom: 0.1875rem; /*3px*/"
+  <header
+    class="flex items-center print:mb-5 mb-8 md:mb-11 border-b-4 print:border-b-2 print:pb-2 pb-8 justify-between"
+  >
+    <div class="block">
+      <h1
+        class="mb-0 print:text-2xl md:text-4xl sm:text-lg font-bold text-gray-750 dark:text-gray-100"
       >
-        {{ nameInitials.initials.name }}
-      </div>
-      <div class="text-center initial">
-        {{ nameInitials.initials.lastname }}
-      </div>
+        {{ name }}
+      </h1>
+      <h2 class="m-0 md:text-1xl font-semibold text-gray-700 leading-snugish">
+        {{ title }}
+      </h2>
     </div>
-    <h1 class="text-2xl font-semibold text-gray-750 pb-px">
-      {{ name }}
-    </h1>
+
+    <span
+      class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-gray-500"
+    >
+      <span class="text-xl font-bold leading-none text-white"
+        >{{ nameInitials.initials.name
+        }}{{ nameInitials.initials.lastname }}</span
+      >
+    </span>
   </header>
   <!-- end Name -->
 </template>
@@ -26,9 +30,10 @@
 <script setup lang="ts">
 import { Person } from '~/types'
 
-const props = defineProps({
-  name: { type: String, required: true },
-})
+const props = defineProps<{
+  name: String
+  title: String
+}>()
 
 const nameInitials = computed<Person>(() => {
   const nameArray: Array<string> = props.name.trim().split(/\s+/)

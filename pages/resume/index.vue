@@ -1,56 +1,80 @@
 <template>
-  <ResumeHeaderTop name="Guillermo Dutra" />
-  <!-- Column -->
-  <div
-    class="print:col-count-3 md:col-count-3 col-gap-md col-fill-auto md:h-letter-col print:h-letter-col"
-  >
-    <ResumeInfoSection section-title="ABOUT ME" :items="ResumeAboutItems" />
-
-    <ResumeInfoSection
-      section-title="EXPERIENCE"
-      :items="ResumeExperienceItems"
+  <section class="bg-white px-10 py-10">
+    <!-- Resume Header -->
+    <ResumeHeaderTop
+      name="Guillermo Dutra"
+      title="Full Stack Web Development"
     />
-    <ResumeInfoSection
-      section-title="EDUCATION"
-      :items="ResumeEducationItems"
-    />
-    <ResumeInfoSection section-title="PROJECTS" :items="ResumeProjectsItems" />
+    <!-- Column -->
+    <div class="print:columns-2 md:columns-3 gap-8 print:gap-2">
+      <!-- Resume About Me -->
+      <ResumeInfoSection section-title="ABOUT ME" :items="ResumeAboutItems" />
 
-    <section class="mt-8 first:mt-0">
-      <ResumeInfoSection section-title="SKILLS" :items="ResumeSkillsItems" />
-    </section>
+      <!-- Resume Experience -->
+      <ResumeInfoSection
+        section-title="EXPERIENCE"
+        :items="ResumeExperienceItems"
+      />
 
-    <ResumeContact
-      sectionTitle="CONTACT"
-      :web="contactInfo.web"
-      :address="contactInfo.address"
-      :email="contactInfo.email"
-      :phone="contactInfo.phone"
-    />
-  </div>
-  <!-- end Column -->
-  <!-- end Page -->
+      <!-- Resume Education -->
+      <ResumeInfoSection
+        section-title="EDUCATION"
+        :items="ResumeEducationItems"
+      />
+      <!-- <ResumeInfoSection section-title="PROJECTS" :items="ResumeProjectsItems" /> -->
+
+      <!-- Resume Skills -->
+      <section class="mt-8 first:mt-0">
+        <ResumeInfoSection section-title="SKILLS" :items="ResumeSkillsItems" />
+      </section>
+
+      <!-- Resume Contact -->
+      <ResumeContact
+        sectionTitle="CONTACT"
+        :web="contactInfo.web"
+        :address="contactInfo.address"
+        :email="contactInfo.email"
+        :phone="contactInfo.phone"
+      />
+    </div>
+    <!-- end Column -->
+    <!-- end Page -->
+  </section>
 </template>
 <script lang="ts" setup>
 import { ResumeItem, Contact } from '~/types/'
 
+// Define the layout
 definePageMeta({
   layout: 'resume',
 })
 
-const contactInfo: Contact = ref({
+// Head meta and  html attrs
+useHead({
+  title: 'Resume - Guillermo Dutra',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  charset: 'utf-8',
+  meta: [{ name: 'description', content: 'Guillermo Dutra Resume in English' }],
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+
+// Contact info
+const contactInfo: Ref<Contact> = reactive({
   web: 'silentcode.dev',
   email: 'info@silentcode.dev',
   address: 'Calle 4, Entre Ruta 72 y calle 12, Playa Verde Uruguay',
   phone: '(+598)92720193',
 })
 
+// About me data
 const ResumeAboutItems: ResumeItem[] = [
   {
-    title: 'Websites developer',
+    title: 'Full Stack Websites developer',
     subtitle: 'Since 2013',
     content:
-      'Front and backend.Blogs, institutional sites, landing pages. Wordpress, Javascript Frameworks. Migration of traditional websites to JAMSTACK technology',
+      'Front and backend.Blogs, institutional sites, landing pages and internal panels. Wordpress, Javascript Frameworks, PHP. Migration of traditional websites to JAMSTACK technology',
   },
   {
     title: 'Project Manager',
@@ -64,6 +88,7 @@ const ResumeAboutItems: ResumeItem[] = [
   },
 ]
 
+// Experience data
 const ResumeExperienceItems: ResumeItem[] = [
   {
     title: 'Wordpress/PHP Developer',
@@ -85,10 +110,11 @@ const ResumeExperienceItems: ResumeItem[] = [
   },
 ]
 
+// Education info
 const ResumeEducationItems: ResumeItem[] = [
   {
     title: 'Taller Informático Uruguay',
-    subtitle: 'Sep 2015 – Dec 2015| PHP and MySQL Web Programmer',
+    subtitle: 'Sep 2015 – Dec 2015| PHP and MySQL Web Development',
     link: 'https://www.tallerdeinformatica.edu.uy/Cursos/detalle/programador-web-phpmysql',
   },
   {
@@ -97,17 +123,17 @@ const ResumeEducationItems: ResumeItem[] = [
     link: 'https://fi.ort.edu.uy/certificado-en-administracion-de-servidores-linux',
   },
   {
+    title: 'First (FCE) - Cambridge English',
+    subtitle: 'December 2006 | Cambridge English',
+    link: 'https://www.cambridgeenglish.org/exams-and-tests/first/',
+  },
+  {
     title: 'UTU (Universidad del Trabajo del Uruguay)',
     subtitle: '2003 – 2006 | Bachelor’s Degree in Computer Sciences',
     link: 'https://www.utu.edu.uy/',
   },
-  {
-    title: 'First (FCE) - B2 First - Cambridge English',
-    subtitle: 'December 2006',
-    link: 'https://www.cambridgeenglish.org/exams-and-tests/first/',
-  },
 ]
-
+// Projects info
 const ResumeProjectsItems: ResumeItem[] = [
   {
     title: 'Universal Resume',
@@ -131,21 +157,21 @@ const ResumeProjectsItems: ResumeItem[] = [
     link: 'https://projects.com',
   },
 ]
-
+// Skills info
 const ResumeSkillsItems: ResumeItem[] = [
   {
     title: 'Wordpress',
     subtitle: 'Expert',
-    content: 'Wordpress developer',
+    content: 'Wordpress themes and plugins development',
     // link: 'https://projects.com',
-    skills: ['Woocommerce', 'WP-JSON', 'Plugins', 'Nuxt 3'],
+    skills: ['Woocommerce', 'WP-JSON', 'Plugins'],
   },
   {
     title: 'JavaScript',
     subtitle: 'Advanced Level',
     content: 'Experience working with JS Frameworks. JAMSTACK Technology',
     // link: 'https://projects.com',
-    skills: ['css', 'JavaScript', 'Vue.js', 'Nuxt 3'],
+    skills: ['css', 'JavaScript', 'Vue.js', 'Nuxt 3', 'Nuxt 2'],
   },
   {
     title: 'Other',
@@ -168,3 +194,4 @@ const ResumeSkillsItems: ResumeItem[] = [
   },
 ]
 </script>
+<style></style>
