@@ -16,3 +16,10 @@ export interface Contact {
   address?: String
   phone?: String
 }
+export interface MenuItem {
+  to?: String
+  href?: String
+  text?: String
+  icon?: String
+}
+export type selectedTheme = 'light' | 'dark'

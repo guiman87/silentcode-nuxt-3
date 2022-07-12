@@ -61,12 +61,12 @@ useHead({
 })
 
 // Contact info
-const contactInfo: Ref<Contact> = reactive({
+const contactInfo: Ref<Contact> = {
   web: 'silentcode.dev',
   email: 'info@silentcode.dev',
   address: 'Calle 4, Entre Ruta 72 y calle 12, Playa Verde Uruguay',
   phone: '(+598)92720193',
-})
+}
 
 // About me data
 const ResumeAboutItems: ResumeItem[] = [

@@ -36,12 +36,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  sectionTitle: { type: String, required: true },
-  web: { type: String, required: true },
-  address: { type: String, required: false },
-  email: { type: String, required: true },
-  phone: { type: String, required: false },
-  items: { type: Array as () => Array<ResumeItem> },
-})
+const props = defineProps<{
+  sectionTitle: String
+  web: String
+  address: String
+  email: String
+  phone: String
+  items: Array<ResumeItem>
+}>()
 </script>
