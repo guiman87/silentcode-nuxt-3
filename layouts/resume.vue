@@ -14,11 +14,4 @@ body {
   -webkit-print-color-adjust: exact !important;
 }
 </style>
-<script lang="ts" setup>
-// Head meta and  html attrs
-useHead({
-  bodyAttrs: {
-    class: 'resume',
-  },
-})
-</script>
+<script lang="ts" setup></script>

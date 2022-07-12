@@ -4,10 +4,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-const themeSelected = getTheme()
+const themeSelected = useState<selectedTheme>('theme-color')
+
 // Head meta and  html attrs
 useHead({
-  bodyAttrs: {
+  htmlAttrs: {
     class: themeSelected,
   },
 })
