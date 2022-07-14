@@ -10,7 +10,9 @@
       >
         {{ name }}
       </h1>
-      <h2 class="m-0 md:text-1xl font-semibold text-gray-700 leading-snugish">
+      <h2
+        class="mb-2 md:text-1xl font-semibold text-gray-700 dark:text-gray-500 leading-snugish"
+      >
         {{ title }}
       </h2>
     </div>

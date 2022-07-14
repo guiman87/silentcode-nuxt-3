@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white px-10 py-10">
+  <section class="bg-white dark:bg-gray-900 dark:text-gray-500 px-10 py-10">
     <!-- Resume Header -->
     <ResumeHeaderTop
       name="Guillermo Dutra"
@@ -42,7 +42,7 @@
   </section>
 </template>
 <script lang="ts" setup>
-import { ResumeItem, Contact } from '~/types/'
+import { ResumeItem, Contact, MenuItem } from '~/types/'
 
 // Define the layout
 definePageMeta({
