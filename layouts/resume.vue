@@ -4,7 +4,7 @@
   >
     <NavBar menu-text="SC" :menu-items="menuItems" />
     <div
-      class="mx-auto container print:bg-white dark:bg-gray-800 print:px-0 px-10 py-4"
+      class="mx-auto container print:bg-white dark:bg-gray-800 print:px-0 md:px-10 md:py-4"
     >
       <slot />
     </div>

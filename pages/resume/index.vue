@@ -1,5 +1,7 @@
 <template>
-  <section class="bg-white dark:bg-gray-900 dark:text-gray-500 px-10 py-10">
+  <section
+    class="bg-white dark:bg-gray-900 dark:text-gray-500 md:px-10 md:py-10 px-5 py-5"
+  >
     <!-- Resume Header -->
     <ResumeHeaderTop
       name="Guillermo Dutra"
