@@ -9,8 +9,17 @@
           class="flex items-center bg-gradient-to-t from-[#ef6837] to-[#f1781b] bg-clip-text text-2xl font-bold text-transparent"
         >
           <img
+            v-if="themeSelected === 'dark'"
             class="rounded-full h-32 mx-auto"
-            src="~/assets/img/avatar.jpg"
+            src="~/assets/img/avatar-dark-mode.png"
+            alt="Avatar image"
+            loading="lazy"
+          />
+
+          <img
+            v-else
+            class="rounded-full h-32 mx-auto"
+            src="~/assets/img/avatar-light-mode.png"
             alt="Avatar image"
             loading="lazy"
           /></div
@@ -47,4 +56,12 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const themeSelected = useState('theme-color')
+const themeAvatar = ref('~/assets/img/avatar-light-mode.png')
+
+watch(themeSelected, (newValue) => {
+  themeAvatar.value =
+    newValue === 'dark' ? 'avatar-dark-mode.png' : 'avatar-light-mode.png'
+})
+</script>

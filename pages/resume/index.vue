@@ -85,6 +85,12 @@ const ResumeAboutItems: ResumeItem[] = [
       'In charge of a small network of blogs. Tasks related to development and delegation of tasks to a small team. I also work as an SEO specialist and manage Google Ads Campaings.',
   },
   {
+    title: 'Owner at Profesionales.uy',
+    subtitle: 'Since 2017',
+    content:
+      'Profesionales.Uy is a website to quickly and easily search for and contact Uruguayan professionals in different specialties.',
+  },
+  {
     title: 'IT Support',
     subtitle: '2006 - 2013',
   },
