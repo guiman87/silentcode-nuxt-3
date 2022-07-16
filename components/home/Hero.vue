@@ -4,26 +4,17 @@
     class="mx-auto max-w-7xl px-3 pt-16 pb-16 text-slate-900 dark:text-amber-100"
   >
     <main class="mx-auto px-4 4">
-      <a href="/demo/astro-boilerplate"
-        ><div
-          class="flex items-center bg-gradient-to-t from-[#ef6837] to-[#f1781b] bg-clip-text text-2xl font-bold text-transparent"
-        >
-          <img
-            v-if="themeSelected === 'dark'"
-            class="rounded-full h-32 mx-auto"
-            src="~/assets/img/avatar-dark-mode.png"
-            alt="Avatar image"
-            loading="lazy"
-          />
+      <div
+        class="flex items-center bg-gradient-to-t from-[#ef6837] to-[#f1781b] bg-clip-text text-2xl font-bold text-transparent"
+      >
+        <img
+          v-if="themeSelected"
+          class="rounded-full h-32 mx-auto"
+          :src="currentAvatar"
+          alt="Avatar image"
+        />
+      </div>
 
-          <img
-            v-else
-            class="rounded-full h-32 mx-auto"
-            src="~/assets/img/avatar-light-mode.png"
-            alt="Avatar image"
-            loading="lazy"
-          /></div
-      ></a>
       <div class="text-center">
         <h1 class="block mt-4 mb-4 dark:text-gray-300 text-slate-900 text-xl">
           I'm Guillermo Dutra Martínez
@@ -57,11 +48,15 @@
 </template>
 
 <script setup lang="ts">
-const themeSelected = useState('theme-color')
-const themeAvatar = ref('~/assets/img/avatar-light-mode.png')
+import avatarDarkMode from '@/assets/img/avatar-dark-mode.png'
+import avatarLightMode from '@/assets/img/avatar-light-mode.png'
 
-watch(themeSelected, (newValue) => {
-  themeAvatar.value =
-    newValue === 'dark' ? 'avatar-dark-mode.png' : 'avatar-light-mode.png'
+const themeSelected = useState('theme-color')
+onMounted(() => {
+  themeSelected.value === 'dark' ? avatarDarkMode : avatarLightMode
 })
+
+const currentAvatar = computed(() =>
+  themeSelected.value === 'dark' ? avatarDarkMode : avatarLightMode
+)
 </script>
