@@ -10,6 +10,12 @@ export interface ResumeItem {
   link?: String
   skills?: Array<String>
 }
+export interface Skill {
+  title?: String
+  content?: String
+  icon?: String
+  viewBox?: String
+}
 export interface Contact {
   web?: String
   email?: String

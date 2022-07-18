@@ -1,7 +1,7 @@
 <!-- eslint-disable import/extensions -->
 <template>
   <div
-    class="mx-auto max-w-7xl px-3 pt-16 pb-16 text-slate-900 dark:text-amber-100"
+    class="mx-auto max-w-7xl px-3 pt-16 pb-20 text-slate-900 dark:text-amber-100"
   >
     <main class="mx-auto px-4 4">
       <div

@@ -1,10 +1,18 @@
 <template>
-  <div
-    class="dark:bg-gradient-to-t dark:from-black dark:to-[#020202] dark:via-[#030120] bg-slate-200"
-  >
-    <NavBar menu-text="SC" :menu-items="menuItems" />
+  <div>
+    <!-- Home Main -->
+    <div
+      class="bg-gradient-to-t dark:from-black dark:to-[#020202] dark:via-[#030120] from-slate-200 to-white via-slate-100"
+    >
+      <!-- Navbar -->
+      <NavBar menu-text="SC" :menu-items="menuItems" />
+      <!-- Hero -->
+      <HomeHero />
+    </div>
+    <!-- Home Main end -->
 
-    <HomeHero />
+    <!-- Areas of Expertise -->
+    <HomeFeatured />
   </div>
 </template>
 <script setup lang="ts">

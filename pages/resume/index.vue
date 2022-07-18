@@ -93,6 +93,8 @@ const ResumeAboutItems: ResumeItem[] = [
   {
     title: 'IT Support',
     subtitle: '2006 - 2013',
+    content:
+      'Recently graduated from high school in computer science, I worked in several companies of different sizes providing computer support',
   },
 ]
 
