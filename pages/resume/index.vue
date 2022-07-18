@@ -1,14 +1,12 @@
 <template>
-  <section
-    class="bg-white dark:bg-gray-900 dark:text-gray-500 md:px-10 md:py-10 px-5 py-5"
-  >
+  <section class="dark:text-gray-500 md:py-10 px-5 py-5 print:bg-white">
     <!-- Resume Header -->
     <ResumeHeaderTop
       name="Guillermo Dutra"
       title="Full Stack Web Development"
     />
     <!-- Column -->
-    <div class="print:columns-2 md:columns-3 print:gap-2 md:gap-9">
+    <div class="print:columns-2 md:columns-3 print:gap-1 md:gap-9">
       <!-- Resume About Me -->
       <ResumeInfoSection section-title="ABOUT ME" :items="ResumeAboutItems" />
 
@@ -66,7 +64,7 @@ useHead({
 const contactInfo: Ref<Contact> = {
   web: 'silentcode.dev',
   email: 'info@silentcode.dev',
-  address: 'Calle 4, Entre Ruta 72 y calle 12, Playa Verde Uruguay',
+  address: 'Piriapolis, Uruguay',
   phone: '(+598)92720193',
 }
 
@@ -181,7 +179,7 @@ const ResumeSkillsItems: ResumeItem[] = [
     subtitle: 'Advanced Level',
     content: 'Experience working with JS Frameworks. JAMSTACK Technology',
     // link: 'https://projects.com',
-    skills: ['css', 'JavaScript', 'Vue.js', 'Nuxt 3', 'Nuxt 2'],
+    skills: ['CSS', 'JavaScript', 'Vue.js', 'Nuxt 3', 'Nuxt 2'],
   },
   {
     title: 'Other',
@@ -189,10 +187,6 @@ const ResumeSkillsItems: ResumeItem[] = [
     // content: '',
     // link: 'https://projects.com',
     skills: [
-      'JavaScript',
-      'Vue.js',
-      'Nuxt 3',
-      'CSS',
       'Git',
       'Linux Server',
       'Google Analytics',

@@ -46,14 +46,12 @@
           v-html="item.content"
         ></p>
         <div v-if="item.skills" class="print:my-1 my-3 last:pb-1">
-          <ul class="flex flex-wrap print:text-sm text-md leading-relaxed">
-            <li
-              v-for="(skill, index) in item.skills"
-              class="print:py-1 px-3 py-2 rounded-full text-gray-500 print:bg-gray-600 print:text-white dark:text-gray-200 dark:bg-gray-800 bg-gray-200 text-xs flex align-center w-max mr-1 my-1"
-            >
-              {{ skill }}
-            </li>
-          </ul>
+          <span
+            v-for="(skill, index) in item.skills"
+            class="print:py-1 print:inline inline-block px-3 py-2 rounded-full text-gray-500 print:bg-gray-600 print:text-white dark:text-gray-200 dark:bg-gray-800 bg-gray-200 text-xs mr-1 my-1"
+          >
+            {{ skill }}
+          </span>
         </div>
       </section>
     </section>
