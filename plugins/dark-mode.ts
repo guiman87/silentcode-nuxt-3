@@ -16,6 +16,18 @@ export const getTheme = () => {
   }
 }
 
+export const setTheme = (newTheme: selectedTheme) => {
+  const storageKey = 'colorTheme'
+  const colorMode = useState<selectedTheme>('theme-color')
+  localStorage.setItem(storageKey, newTheme)
+  colorMode.value = newTheme
+  useHead({
+    htmlAttrs: {
+      class: newTheme,
+    },
+  })
+}
+
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('app:beforeMount', () => {
     getTheme()
@@ -25,4 +37,9 @@ export default defineNuxtPlugin((nuxtApp) => {
   useHead({
     script: [{ children: script }],
   })
+  return {
+    provide: {
+      setTheme,
+    },
+  }
 })
