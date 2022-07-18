@@ -51,7 +51,7 @@
           </div>
           <div class="flex-shrink-0 flex items-center mr-5">
             <nuxt-link
-              class="dark:text-black bg-slate-900 text-amber-300 font-bold dark:bg-white py-3 px-3"
+              class="dark:text-black bg-slate-900 text-slate-200 font-bold dark:bg-white py-3 px-3"
               to="/"
               >{{ menuText }}
             </nuxt-link>
