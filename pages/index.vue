@@ -72,18 +72,6 @@ const menuItems: MenuItem[] = [
     to: '/resume',
     text: 'Resume',
   },
-  {
-    to: '/portfolio',
-    text: 'Portfolio',
-  },
-  {
-    to: '/projects',
-    text: 'Projects',
-  },
-  {
-    href: 'https://github.com/guiman87/wp-decoupled',
-    text: 'Github',
-  },
 ]
 
 const Skills: Skill[] = [

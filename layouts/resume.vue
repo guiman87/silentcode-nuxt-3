@@ -19,15 +19,7 @@ import { MenuItem } from '~/types/'
 // Menu items
 const menuItems: MenuItem[] = [
   {
-    to: '/portfolio',
-    text: 'Portfolio',
-  },
-  {
-    to: '/projects',
-    text: 'Projects',
-  },
-  {
-    href: 'https://github.com/guiman87/wp-decoupled',
+    href: 'https://github.com/guiman87/',
     text: 'Github',
   },
 ]
