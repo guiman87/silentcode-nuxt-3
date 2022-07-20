@@ -30,14 +30,14 @@
           <p
             class="mt-3 mx-auto md:max-w-3xl text-base sm:text-lg md:mt-5 md:text-xl dark:text-gray-300 text-slate-900"
           >
-            This is my Personal/Profesional Website. The porpuose of this
+            This is my Personal/Professional Website. The porpuose of this
             website is to share my work as a Full Stack Website Developer. Here
             you'll find my
             <nuxt-link to="/resume"
               ><span class="text-orange-600">portfolio</span></nuxt-link
             >
             along with my
-            <nuxt-link to="/resume"
+            <nuxt-link to="/"
               ><span class="text-orange-600">resume</span></nuxt-link
             >
           </p>
