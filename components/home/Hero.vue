@@ -33,11 +33,11 @@
             This is my Personal/Professional Website. The porpuose of this
             website is to share my work as a Full Stack Website Developer. Here
             you'll find my
-            <nuxt-link to="/resume"
+            <nuxt-link to="/portfolio"
               ><span class="text-orange-600">portfolio</span></nuxt-link
             >
             along with my
-            <nuxt-link to="/"
+            <nuxt-link to="/resume"
               ><span class="text-orange-600">resume</span></nuxt-link
             >
           </p>

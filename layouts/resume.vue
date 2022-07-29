@@ -19,8 +19,12 @@ import { MenuItem } from '~/types/'
 // Menu items
 const menuItems: MenuItem[] = [
   {
-    href: 'https://github.com/guiman87/',
-    text: 'Github',
+    to: '/portfolio',
+    text: 'Portfolio',
+  },
+  {
+    to: '/resume',
+    text: 'Resume',
   },
 ]
 </script>

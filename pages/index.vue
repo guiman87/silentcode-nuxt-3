@@ -72,6 +72,10 @@ const menuItems: MenuItem[] = [
     to: '/resume',
     text: 'Resume',
   },
+  {
+    to: '/portfolio',
+    text: 'Portfolio',
+  },
 ]
 
 const Skills: Skill[] = [
