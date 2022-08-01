@@ -2,8 +2,11 @@ import { useState } from '#app'
 
 type selectedTheme = 'light' | 'dark'
 export const getTheme = () => {
-  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  const storageKey = 'colorTheme'
+  const isDark: Boolean = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches
+
+  const storageKey: String = 'colorTheme'
 
   const localTheme: selectedTheme = localStorage.getItem(storageKey)
 
