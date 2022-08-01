@@ -41,7 +41,9 @@
                 {{ project.name }}
               </a>
               <dl class="font-normal lg:hidden">
-                <dd class="mt-1 truncate text-gray-700">
+                <dd
+                  class="mt-1 truncate text-gray-700 dark:text-gray-400 font-semibold"
+                >
                   {{ project.title }}
                 </dd>
                 <dd
@@ -51,7 +53,9 @@
                 </dd>
               </dl>
             </td>
-            <td class="hidden px-3 py-4 text-sm text-gray-400 lg:table-cell">
+            <td
+              class="hidden px-3 py-4 text-sm text-gray-500 dark:text-gray-400 lg:table-cell"
+            >
               {{ project.title }}
             </td>
             <td
@@ -59,7 +63,9 @@
             >
               {{ project.description }}
             </td>
-            <td class="px-3 py-4 text-sm text-gray-400">{{ project.date }}</td>
+            <td class="px-3 py-4 text-sm text-gray-500 dark:text-gray-400">
+              {{ project.date }}
+            </td>
           </tr>
         </tbody>
       </table>

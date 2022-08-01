@@ -1,4 +1,3 @@
-<!-- eslint-disable import/extensions -->
 <template>
   <div
     class="mx-auto max-w-7xl px-3 pt-10 pb-16 md:pt-16 md:pb-20 text-slate-900 dark:text-amber-100"
@@ -48,7 +47,6 @@
     </main>
   </div>
 </template>
-
 <script setup lang="ts">
 import avatarDarkMode from '@/assets/img/avatar-dark-mode.png'
 import avatarLightMode from '@/assets/img/avatar-light-mode.png'
