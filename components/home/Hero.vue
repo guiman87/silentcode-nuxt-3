@@ -30,7 +30,7 @@
           <p
             class="mt-3 mx-auto md:max-w-3xl text-base sm:text-lg md:mt-5 md:text-xl dark:text-gray-300 text-slate-900"
           >
-            This is my Personal/Professional Website. The porpuose of this
+            This is my Personal/Professional Website. The purpose of this
             website is to share my work as a Full Stack Website Developer. Here
             you'll find my
             <nuxt-link to="/portfolio"
