@@ -1,52 +1,70 @@
 <template>
-  <section class="dark:text-gray-500 md:py-10 px-5 py-5 print:bg-white">
-    <!-- Resume Header -->
-    <ResumeHeaderTop
-      name="Guillermo Dutra"
-      title="Full Stack Web Development"
-    />
-    <!-- Column -->
-    <div class="print:columns-2 md:columns-3 print:gap-1 md:gap-9">
-      <!-- Resume About Me -->
-      <ResumeInfoSection section-title="ABOUT ME" :items="ResumeAboutItems" />
-
-      <!-- Resume Experience -->
-      <ResumeInfoSection
-        section-title="EXPERIENCE"
-        :items="ResumeExperienceItems"
+  <div>
+    <NavBar menu-text="SC" :menu-items="menuItems" />
+    <section class="dark:text-gray-500 md:py-10 px-5 py-5 print:bg-white">
+      <!-- Resume Header -->
+      <ResumeHeaderTop
+        name="Guillermo Dutra"
+        title="Full Stack Web Development"
       />
+      <!-- Column -->
+      <div class="print:columns-2 md:columns-3 print:gap-1 md:gap-9">
+        <!-- Resume About Me -->
+        <ResumeInfoSection section-title="ABOUT ME" :items="ResumeAboutItems" />
 
-      <!-- Resume Education -->
-      <ResumeInfoSection
-        section-title="EDUCATION"
-        :items="ResumeEducationItems"
-      />
-      <!-- <ResumeInfoSection section-title="PROJECTS" :items="ResumeProjectsItems" /> -->
+        <!-- Resume Experience -->
+        <ResumeInfoSection
+          section-title="EXPERIENCE"
+          :items="ResumeExperienceItems"
+        />
 
-      <!-- Resume Skills -->
-      <section class="mt-8 first:mt-0">
-        <ResumeInfoSection section-title="SKILLS" :items="ResumeSkillsItems" />
-      </section>
+        <!-- Resume Education -->
+        <ResumeInfoSection
+          section-title="EDUCATION"
+          :items="ResumeEducationItems"
+        />
+        <!-- <ResumeInfoSection section-title="PROJECTS" :items="ResumeProjectsItems" /> -->
 
-      <!-- Resume Contact -->
-      <ResumeContact
-        sectionTitle="CONTACT"
-        :web="contactInfo.web"
-        :address="contactInfo.address"
-        :email="contactInfo.email"
-        :phone="contactInfo.phone"
-      />
-    </div>
-    <!-- end Column -->
-    <!-- end Page -->
-  </section>
+        <!-- Resume Skills -->
+        <section class="mt-8 first:mt-0">
+          <ResumeInfoSection
+            section-title="SKILLS"
+            :items="ResumeSkillsItems"
+          />
+        </section>
+
+        <!-- Resume Contact -->
+        <ResumeContact
+          sectionTitle="CONTACT"
+          :web="contactInfo.web"
+          :address="contactInfo.address"
+          :email="contactInfo.email"
+          :phone="contactInfo.phone"
+        />
+      </div>
+      <!-- end Column -->
+      <!-- end Page -->
+    </section>
+  </div>
 </template>
 <script lang="ts" setup>
 import { ResumeItem, Contact, MenuItem } from '~/types/'
 
+// Menu items
+const menuItems: MenuItem[] = [
+  {
+    to: '/portfolio',
+    text: 'Portfolio',
+  },
+  {
+    to: '/resume',
+    text: 'Resume',
+  },
+]
+
 // Define the layout
 definePageMeta({
-  layout: 'resume',
+  layout: 'career',
 })
 
 // Head meta and  html attrs

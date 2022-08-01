@@ -35,20 +35,20 @@
 
           <p
             v-if="item.subtitle"
-            class="text-md print:text-sm text-gray-700 print:text-gray-800 dark:text-gray-500"
+            class="text-md print:text-sm text-gray-700 print:text-gray-800 dark:text-gray-400"
           >
             {{ item.subtitle }}
           </p>
         </header>
         <p
           v-if="item.content"
-          class="my-2 print:my-1 text-md print:text-sm leading-snug text-gray-700 dark:text-gray-500"
+          class="my-2 print:my-1 text-md print:text-sm leading-snug text-gray-700 dark:text-gray-400"
           v-html="item.content"
         ></p>
         <div v-if="item.skills" class="print:my-1 my-3 last:pb-1">
           <span
             v-for="(skill, index) in item.skills"
-            class="print:py-1 print:inline inline-block px-3 py-2 rounded-full text-gray-500 print:bg-gray-600 print:text-white dark:text-gray-200 dark:bg-gray-800 bg-gray-200 text-xs mr-1 my-1"
+            class="print:py-1 print:inline inline-block px-3 py-2 rounded-full text-gray-400 print:bg-gray-600 print:text-white dark:text-gray-200 dark:bg-gray-800 bg-gray-200 text-xs mr-1 my-1"
           >
             {{ skill }}
           </span>

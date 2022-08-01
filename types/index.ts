@@ -28,4 +28,13 @@ export interface MenuItem {
   text?: String
   icon?: String
 }
+
+export interface PortfolioItem {
+  name?: String
+  title?: String
+  description?: String
+  date?: String
+  link?: String
+}
+
 export type selectedTheme = 'light' | 'dark'
