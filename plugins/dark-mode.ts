@@ -1,14 +1,13 @@
 import { useState } from '#app'
 
-type selectedTheme = 'light' | 'dark'
-export const getTheme = () => {
-  const isDark: Boolean = window.matchMedia(
+export const getTheme = (): void => {
+  const isDark: boolean = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
 
-  const storageKey: String = 'colorTheme'
+  const storageKey: string = 'colorTheme'
 
-  const localTheme: selectedTheme = localStorage.getItem(storageKey)
+  const localTheme: string = localStorage.getItem(storageKey)
 
   if (localTheme) {
     setTheme(localTheme)
@@ -19,10 +18,14 @@ export const getTheme = () => {
   }
 }
 
-export const setTheme = (newTheme: selectedTheme) => {
-  const storageKey = 'colorTheme'
+export const setTheme = (newTheme: selectedTheme): void => {
+  type selectedTheme = 'light' | 'dark'
+
+  const storageKey: string = 'colorTheme'
   const colorMode = useState<selectedTheme>('theme-color')
+
   localStorage.setItem(storageKey, newTheme)
+
   colorMode.value = newTheme
   useHead({
     htmlAttrs: {
@@ -35,8 +38,9 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('app:beforeMount', () => {
     getTheme()
   })
-  const script =
+  const script: string =
     '(()=>{const e=localStorage.getItem("colorTheme");(!e||e==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:e==="dark")&&document.documentElement.classList.add("dark")})();'
+
   useHead({
     script: [{ children: script }],
   })
