@@ -5,14 +5,16 @@
     <main class="mx-auto items-center">
       <div class="flex md:px-36">
         <div class="flex-initial">
-          <img
-            v-if="themeSelected"
-            class="rounded-full h-32 mx-auto"
-            :src="currentAvatar"
-            alt="Avatar image"
-            width="124"
-            height="128"
-          />
+          <div style="min-width: 124px">
+            <img
+              v-if="themeSelected"
+              class="rounded-full h-32 mx-auto"
+              :src="currentAvatar"
+              alt="Avatar image"
+              width="124"
+              height="128"
+            />
+          </div>
         </div>
         <div class="flex-1">
           <h1
