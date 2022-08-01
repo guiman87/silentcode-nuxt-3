@@ -1,27 +1,9 @@
 import { useState } from '#app'
 
-export const getTheme = (): void => {
-  const isDark: boolean = window.matchMedia(
-    '(prefers-color-scheme: dark)'
-  ).matches
-
-  const storageKey: string = 'colorTheme'
-
-  const localTheme: string = localStorage.getItem(storageKey)
-
-  if (localTheme) {
-    setTheme(localTheme)
-  } else if (isDark) {
-    setTheme('dark')
-  } else {
-    setTheme('light')
-  }
-}
+type selectedTheme = 'light' | 'dark'
 
 export const setTheme = (newTheme: selectedTheme): void => {
-  type selectedTheme = 'light' | 'dark'
-
-  const storageKey: string = 'colorTheme'
+  const storageKey: String = 'colorTheme'
   const colorMode = useState<selectedTheme>('theme-color')
 
   localStorage.setItem(storageKey, newTheme)
@@ -32,6 +14,24 @@ export const setTheme = (newTheme: selectedTheme): void => {
       class: newTheme,
     },
   })
+}
+
+export const getTheme = (): void => {
+  const isDark: boolean = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches
+
+  const storageKey: String = 'colorTheme'
+
+  const localTheme: String = localStorage.getItem(storageKey)
+
+  if (localTheme) {
+    setTheme(localTheme)
+  } else if (isDark) {
+    setTheme('dark')
+  } else {
+    setTheme('light')
+  }
 }
 
 export default defineNuxtPlugin((nuxtApp) => {

@@ -45,7 +45,7 @@
                   {{ project.title }}
                 </dd>
                 <dd
-                  class="mt-1 truncate sm:hidden text-md print:text-sm leading-snug text-gray-700 dark:text-gray-400"
+                  class="mt-1 sm:hidden text-md print:text-sm leading-snug text-gray-700 dark:text-gray-400"
                 >
                   {{ project.description }}
                 </dd>
