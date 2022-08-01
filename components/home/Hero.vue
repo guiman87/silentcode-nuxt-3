@@ -11,6 +11,8 @@
             class="rounded-full h-32 mx-auto"
             :src="currentAvatar"
             alt="Avatar image"
+            width="190"
+            height="196"
           />
         </div>
         <div class="flex-1">
