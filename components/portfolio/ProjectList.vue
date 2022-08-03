@@ -37,7 +37,7 @@
             <td
               class="w-full max-w-0 py-4 px-2 font-semibold print:text-md text-gray-800 dark:text-gray-400 sm:w-auto sm:max-w-none sm:pl-3"
             >
-              <a :href="project.link">
+              <a target="_blank" href="project.link">
                 {{ project.name }}
               </a>
               <dl class="font-normal lg:hidden">
