@@ -48,7 +48,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ResumeItem, Contact, MenuItem } from '~/types/'
+import { Contact, MenuItem, ResumeItem } from '~/types/'
 
 // Menu items
 const menuItems: MenuItem[] = [
@@ -89,50 +89,56 @@ const contactInfo: Ref<Contact> = {
 // About me data
 const ResumeAboutItems: ResumeItem[] = [
   {
-    title: 'Full Stack Websites developer',
+    title: 'Senior Full Stack Developer at Boston Globe Media',
+    subtitle: 'Since January 2023',
+    content:
+      'I am a Senior Full Stack Developer at Boston Globe Media with expertise in WordPress development, Linux system administration, and PHP. I have been working remotely for BGMP, since January 2023. My skills include PHP, JavaScript, Jenkins, and automated test development, among others',
+  },
+  {
+    title: 'Full Stack Websites Developer',
     subtitle: 'Since 2013',
     content:
-      'Front and backend.Blogs, institutional sites, landing pages and internal panels. Wordpress, Javascript Frameworks, PHP. Migration of traditional websites to JAMSTACK technology',
+      'I develop both front-end and back-end components for blogs, institutional sites, landing pages, and internal panels. My expertise includes WordPress, JavaScript frameworks, PHP, and migrating traditional websites to JAMSTACK technology.',
   },
   {
     title: 'Project Manager',
-    subtitle: 'Since 2018',
+    subtitle: '2018 - 2023',
     content:
-      'In charge of a small network of blogs. Tasks related to development and delegation of tasks to a small team. I also work as an SEO specialist and manage Google Ads Campaings.',
+      'I managed a small network of blogs, overseeing development tasks and delegating to a small team. Additionally, I worked as an SEO specialist and managed Google Ads campaigns.',
   },
   {
     title: 'Owner at Profesionales.uy',
     subtitle: 'Since 2017',
     content:
-      'Profesionales.Uy is a website to quickly and easily search for and contact Uruguayan professionals in different specialties.',
+      'Profesionales.uy is a platform that enables users to quickly and easily search for and contact Uruguayan professionals across various specialties.',
   },
   {
     title: 'IT Support',
     subtitle: '2006 - 2013',
     content:
-      'Recently graduated from high school in computer science, I worked in several companies of different sizes providing computer support',
+      'After graduating from high school with a degree in computer science, I provided IT support to several companies of different sizes.',
   },
 ]
 
 // Experience data
 const ResumeExperienceItems: ResumeItem[] = [
   {
-    title: 'Wordpress/PHP Developer',
+    title: 'Full Stack Developer',
     subtitle: '2013 - Present | Freelance',
     content:
-      'Creation and modification of websites. Development of themes and plugins. Experience using and extending the WP-API JSON for different types of uses. Mainly working for local clients and trough the Upwork.com platform',
+      'I specialize in the creation and modification of websites and web applications, developing both front-end and back-end components. My expertise includes custom themes and plugins, as well as extensive experience using and extending various APIs for different applications. I primarily work with local clients and through the Upwork.com platform.',
   },
   {
     title: 'Front-End Developer',
     subtitle: '2013 - Present | Freelance',
     content:
-      'Creation and modification of front end web. Experience with JavaScript frameworks, especially Vue.js and NUXT.js. Extensive domain of HTML, HTML5, CSS, SASS',
+      'I focus on the creation and modification of front-end web interfaces, with expertise in JavaScript frameworks, especially Vue.js and NUXT.js. I have extensive knowledge of HTML, HTML5, CSS, and SASS.',
   },
   {
     title: 'IT Support',
     subtitle: '2006 - 2013 | Several Companies',
     content:
-      'Stage in which I worked as an IT support specialist in different companies.',
+      'During this period, I worked as an IT support specialist for various companies, providing technical assistance and support.',
   },
 ]
 
@@ -194,10 +200,10 @@ const ResumeSkillsItems: ResumeItem[] = [
   },
   {
     title: 'JavaScript',
-    subtitle: 'Advanced Level',
-    content: 'Experience working with JS Frameworks. JAMSTACK Technology',
+    subtitle: 'Expert',
+    content: 'Experience working with JS Frameworks.',
     // link: 'https://projects.com',
-    skills: ['CSS', 'JavaScript', 'Vue.js', 'Nuxt 3', 'Nuxt 2'],
+    skills: ['CSS', 'JavaScript', 'Vue.js', 'Nuxt 3', 'Nuxt 2', 'TypeScript'],
   },
   {
     title: 'Other',
@@ -212,6 +218,9 @@ const ResumeSkillsItems: ResumeItem[] = [
       'Search Console',
       'SEO',
       'Typography',
+      'Cypress',
+      'Jenkins',
+      'PHP',
     ],
   },
 ]
